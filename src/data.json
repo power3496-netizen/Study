@@ -1,0 +1,72 @@
+{
+  "asOf": "2026-10-06 KST",
+  "sources": {
+    "electric_engineer": {
+      "name": "Q-net 전기기사 국가자격 종목별 상세정보",
+      "url": "https://q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0",
+      "asOf": "2026-10-06 KST"
+    },
+    "electric_construction": {
+      "name": "Q-net 전기공사기사 국가자격 종목별 상세정보",
+      "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503&jmCd=1160&tabGbn=1",
+      "asOf": "2026-10-06 KST"
+    }
+  },
+  "facts": {
+    "electric_engineer": [
+      {
+        "label": "2026년 정기 기사 1회 실기시험",
+        "value": "2026.04.18 ~ 2026.05.06",
+        "source": "Q-net 전기기사 국가자격 종목별 상세정보",
+        "sourceUrl": "https://q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0",
+        "asOf": "2026-10-06 KST"
+      },
+      {
+        "label": "2026년 정기 기사 2회 실기시험",
+        "value": "2026.07.18 ~ 2026.08.05",
+        "source": "Q-net 전기기사 국가자격 종목별 상세정보",
+        "sourceUrl": "https://q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0",
+        "asOf": "2026-10-06 KST"
+      },
+      {
+        "label": "2026년 정기 기사 3회 실기시험",
+        "value": "2026.10.24 ~ 2026.11.13",
+        "source": "Q-net 전기기사 국가자격 종목별 상세정보",
+        "sourceUrl": "https://q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0",
+        "asOf": "2026-10-06 KST"
+      },
+      {
+        "label": "실기시험 수수료",
+        "value": "22,600원",
+        "source": "Q-net 전기기사 국가자격 종목별 상세정보",
+        "sourceUrl": "https://q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0",
+        "asOf": "2026-10-06 KST"
+      }
+    ],
+    "electric_construction": [
+      {
+        "label": "실기시험 수수료",
+        "value": "22,600원",
+        "source": "Q-net 전기공사기사 국가자격 종목별 상세정보",
+        "sourceUrl": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503&jmCd=1160&tabGbn=1",
+        "asOf": "2026-10-06 KST"
+      },
+      {
+        "label": "실기 검정방법",
+        "value": "필답형(2시간 30분)",
+        "source": "Q-net 전기공사기사 국가자격 종목별 상세정보",
+        "sourceUrl": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503&jmCd=1160&tabGbn=1",
+        "asOf": "2026-10-06 KST"
+      }
+    ]
+  },
+  "passRates": {
+    "asOf": "2026-10-06 KST",
+    "source": {
+      "name": "Q-net 국가자격 종목별 상세정보",
+      "url": "https://www.q-net.or.kr/crf005.do"
+    },
+    "electric_engineer": [],
+    "electric_construction": []
+  }
+}
