@@ -145,7 +145,7 @@ class PassRateInput(BaseModel):
     passers: int
 @app.middleware("http")
 async def require_user(request: Request, call_next):
-    if request.url.path in ("/api/health", "/api/auth"):
+    if request.url.path in ("/api/health", "/api/auth","/docs", "/redoc", "/openapi.json"):
         return await call_next(request)
     pin = request.headers.get("X-Study-User", "")
     if not (len(pin) == 4 and pin.isdigit()):
