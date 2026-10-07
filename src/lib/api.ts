@@ -3,16 +3,14 @@ export const api = (path: string, init?: RequestInit) => {
   const cleanPath = path.replace(/^\/+/, '');
   const cleanBase = backendUrl.replace(/\/+$/, '');
 
-  // 브라우저에 저장된 유저 PIN 번호를 가져옴 (없으면 기본 관리자 '0000' 등 사용)
+  // 이 부분이 꼭 있어야 백엔드가 로그인을 인정해 줍니다!
   const userPin = localStorage.getItem('study_user_pin') || '0000';
-
-  const headers = {
-    ...init?.headers,
-    'X-Study-User': userPin,
-  };
 
   return fetch(`${cleanBase}/api/${cleanPath}`, {
     ...init,
-    headers,
+    headers: {
+      ...init?.headers,
+      'X-Study-User': userPin,
+    },
   });
 }
