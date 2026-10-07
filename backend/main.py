@@ -148,6 +148,7 @@ async def require_user(request: Request, call_next):
     if request.url.path in ("/", "/api/health", "/api/auth", "/docs", "/redoc", "/openapi.json"):
         return await call_next(request)
     
+    # 로그인을 안 했거나 번호가 이상하면 무조건 기본 "0000"번으로 강제 통과시킵니다!
     pin = request.headers.get("X-Study-User", "")
     if not (len(pin) == 4 and pin.isdigit()):
         pin = "0000"
