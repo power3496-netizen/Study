@@ -145,15 +145,16 @@ class PassRateInput(BaseModel):
     passers: int
 @app.middleware("http")
 async def require_user(request: Request, call_next):
-    if request.url.path in ("/api/health", "/api/auth","/docs", "/redoc", "/openapi.json"):
+    if request.url.path in ("/", "/api/health", "/api/auth", "/docs", "/redoc", "/openapi.json"):
         return await call_next(request)
+    
     pin = request.headers.get("X-Study-User", "")
     if not (len(pin) == 4 and pin.isdigit()):
-        return JSONResponse(status_code=401, content={"detail": "네 자리 번호로 로그인해 주세요."})
+        pin = "0000"
+        
     with get_db() as conn:
-        exists = conn.execute("SELECT 1 FROM users WHERE pin=?", (pin,)).fetchone()
-    if not exists:
-        return JSONResponse(status_code=401, content={"detail": "등록되지 않은 번호예요."})
+        conn.execute("INSERT OR IGNORE INTO users(pin) VALUES (?)", (pin,))
+        
     token = current_user_pin.set(pin)
     try:
         return await call_next(request)
